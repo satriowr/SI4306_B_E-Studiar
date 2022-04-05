@@ -1,0 +1,20 @@
+{
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSave": true
+    },
+    "files.associations": {
+        "*.module": "php",
+        ".blade.php": "html",
+        "*.tpl": "html"
+    },
+    "[blade]": {
+        // "editor.defaultFormatter": "bmewburn.vscode-intelephense",
+        "editor.defaultFormatter": "onecentlin.laravel-blade",
+        "editor.formatOnSave": true
+    },
+    "blade.format.enable": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.minimap.maxColumn": 80
+}

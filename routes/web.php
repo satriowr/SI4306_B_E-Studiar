@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\mentor\authController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('mentor/auth/registrasi');
 });
+
+Route::get('mentor/registrasi', [authController::class, 'registrasi']);
+Route::post('mentor/store_registrasi', [authController::class, 'store_registrasi']);
