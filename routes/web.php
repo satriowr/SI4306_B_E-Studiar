@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/mentor', function () {
     return view('mentor/auth/registrasi');
+});
+
+Route::get('/', function () {
+    return view('index');
 });
 
 Route::get('mentor/registrasi', [authController::class, 'registrasi']);
