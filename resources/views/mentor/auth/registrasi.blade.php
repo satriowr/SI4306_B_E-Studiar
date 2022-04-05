@@ -6,7 +6,7 @@
       <div class="mb-3 text-center">
         <h2>Registrasi Calon Mentor</h2>
       </div>
-      <form role="form" action="/mentor/store_registrasi" method="POST">
+      <form role="form" action="/mentor/registrasi/pilih_bidang" method="POST">
         @csrf
         <div class="mb-3">
           <label class="form-label">Nama Lengkap</label>
@@ -33,10 +33,7 @@
           <textarea name="deskripsi" class="form-control" rows="5"
             placeholder="Deskripsikan diri anda sebagai calon mentor"></textarea>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
+
         <button type="submit" class="btn col-12 btn-primary">Selanjutnya</button>
       </form>
     </div>

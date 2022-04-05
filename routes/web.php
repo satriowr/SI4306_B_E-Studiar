@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('mentor/registrasi', [authController::class, 'registrasi']);
 Route::post('mentor/store_registrasi', [authController::class, 'store_registrasi']);
+Route::post('mentor/registrasi/pilih_bidang', [authController::class, 'pilih_bidang']);

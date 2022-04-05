@@ -17,3 +17,17 @@ function generateMentorID()
 
   return $number;
 }
+
+$data_sementara_calon_mentor;
+
+function saveCalonMentorData($data)
+{
+  global $data_sementara_calon_mentor;
+  $data_sementara_calon_mentor = $data;
+}
+
+function getCalonMentorData()
+{
+  global $data_sementara_calon_mentor;
+  return $data_sementara_calon_mentor;
+}

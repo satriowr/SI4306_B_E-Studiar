@@ -14,7 +14,7 @@ class CreateMentorsTable extends Migration
     public function up()
     {
         Schema::create('mentors', function (Blueprint $table) {
-            $table->integer('id')->unsigned()->primary();
+            $table->bigInteger('id')->unsigned()->primary();
             $table->string('nama');
             $table->string('password');
             $table->string('email');

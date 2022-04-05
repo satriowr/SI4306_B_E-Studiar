@@ -14,7 +14,7 @@ class CreateCalonMentorsTable extends Migration
     public function up()
     {
         Schema::create('calon_mentors', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigInteger('id')->unsigned()->primary();
             $table->string('nama');
             $table->string('email');
             $table->date('tgl_lahir');
