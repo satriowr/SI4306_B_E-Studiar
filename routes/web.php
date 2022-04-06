@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/mentor', function () {
-    return view('mentor/auth/registrasi');
-});
+// Route::get('/mentor', function () {
+//     return view('mentor/auth/registrasi');
+// });
 
 Route::get('/', function () {
     return view('index');
