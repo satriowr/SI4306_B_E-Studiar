@@ -19,6 +19,7 @@ class CreateBidangAjarsTable extends Migration
             $table->foreign('id_mentor')->references('id')->on('calon_mentors')->onDelete('cascade')->onUpdate('cascade');
             $table->string('bidang');
             $table->string('nama_kelas');
+            $table->longText('gambar');
             $table->string('tarif');
             $table->longText('deskripsi');
             $table->timestamps();

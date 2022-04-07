@@ -31,8 +31,14 @@ class authController extends Controller
 
     public function store_registrasi(Request $request)
     {
+        $imgName = $request->gambar;
+        if ($request->gambar) {
+            $imgName = time() . '-' . $request->gambar->getClientOriginalName();
+        }
+
+
         $data_calon_mentor = Session::get('calonMentorTemporary');
-        DB::transaction(function () use ($request, $data_calon_mentor) { // Start the transaction
+        DB::transaction(function () use ($request, $data_calon_mentor, $imgName) { // Start the transaction
 
             $calonMentor = new CalonMentor();
             $calonMentor->id = $data_calon_mentor['id'];
@@ -49,8 +55,11 @@ class authController extends Controller
             $bidangAjar->nama_kelas = $request->nama_kelas;
             $bidangAjar->tarif = $request->tarif;
             $bidangAjar->deskripsi = $request->deskripsi;
+            $bidangAjar->gambar = $imgName;
             $bidangAjar->save();
         }); // End transaction
+
+        $request->gambar->move(public_path('img/kelas/' . $data_calon_mentor['id']), $imgName);
 
         Session::forget('calonMentorTemporary');
         return view('index');
